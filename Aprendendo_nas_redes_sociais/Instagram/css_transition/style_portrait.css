@@ -50,6 +50,18 @@ span {
     position: absolute;
 }
 
+@keyframes animSpan {
+    from {
+        color: rgb(234, 94, 246);
+        text-shadow: 1px 1px 1px black;
+    }
+    to {
+        color: mediumblue;
+        outline: 1px solid rgb(234, 0, 255);
+        outline-style: hidden;
+    }
+}
+
 main {
     width: 100vw;
     position: relative;/* Para que os <p> se ajustem */
