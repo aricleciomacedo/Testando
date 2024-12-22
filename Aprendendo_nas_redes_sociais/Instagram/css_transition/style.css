@@ -93,9 +93,13 @@
     /* cards */
     div.caixaMain .card1 {
         font-size: 1rem;
+        position: relative;
+        color: white;
     }
     div.caixaMain .card2 {
         font-size: 1rem;
+        position: relative;
+        color: white;
     }
     
     /* Cards */
@@ -131,13 +135,17 @@
     /* Conteúdo a parte */
     .aside1 {
         position: absolute;
-        top: 86%;
-        left: 20%;
+        top: 84%;
+        left: 24%;
+        color: white;
+        font-size: 2rem;
     }
     .aside2 {
         position: absolute;
-        top: 86%;
-        left: 70%;
+        top: 84%;
+        left: 16%;
+        color: white;
+        font-size: 2rem;
     }
 
     /* Roda-Pé */

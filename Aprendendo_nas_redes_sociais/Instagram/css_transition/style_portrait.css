@@ -76,12 +76,16 @@ div.caixaMain .card1, .card2 {
     padding: 50px;
 }
 
-/* Cards */
+/* cards */
 div.caixaMain .card1 {
     font-size: 1rem;
+    position: relative;
+    color: white;
 }
 div.caixaMain .card2 {
     font-size: 1rem;
+    position: relative;
+    color: white;
 }
 
 /* Cards */
@@ -117,12 +121,12 @@ div.caixaMain .card2 img:hover {
 /* Conteúdo a parte */
 .aside1 {
     position: absolute;
-    top: 86%;
-    left: 20%;
+    top: 82%;
+    left: 66%;
 }
 .aside2 {
     position: absolute;
-    top: 86%;
+    top: 82%;
     left: 70%;
 }
 
