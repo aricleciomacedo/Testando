@@ -7,25 +7,31 @@
         padding: 0px;
         box-sizing: border-box;
     }
+
+    html {
+        height: 100%;
+    }
     body, html {
-        width: 100vw;
-        height: 100vh;
+        margin: 0;
+    }
+    body {
+        min-height: 100%;
     }
 
     header {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         background-color: rgb(0, 0, 44);
         color: white;
         text-align: center;
     }
-    main.caixa1 {
+    main.container-main {
+        height: 66%;
         display: flex;
         align-items: center;
         justify-content: center;
         /* flex-direction: row-reverse; */
         gap: 30px;
-    
     }
     .instaIcon {
         font-size: 50px;
@@ -62,16 +68,13 @@
         }
     }
     
-    main {
-        width: 100vw;
-        position: relative;/* Para que os <p> se ajustem */
+    main.container-main {
         background-color: black;
-        padding: 20px;
     }
 
     div.caixaMain {
-        height: 98%;
-        display: flex;
+        /* height: 100%; */
+        /* display: flex; */
         align-items: center;
         justify-content: space-around;
         flex-direction: row;
@@ -150,12 +153,14 @@
 
     /* Roda-Pé */
     footer {
-        height: 62px;
+        position: fixed;
+        width: 100%;
         background-color: rgb(0, 0, 44);
         color: white;
         text-align: center;
+        font-size: 2rem;
     }
     footer p i {
-        padding: 10px;
+        padding: 0px 0px;
     }
 }
