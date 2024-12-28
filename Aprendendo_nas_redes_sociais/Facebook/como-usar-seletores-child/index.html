@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seletor :child</title>
+    <style>
+        body {
+            /* Fundo com escurecimento de imagem */
+            background: 
+                linear-gradient( to left, #000000, rgba(5, 0, 0, 0.644)),
+                url(imaginando.jpg) no-repeat center/cover;
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #c5d7d9;
+            letter-spacing: .2rem;
+            text-shadow: 2px 0px 0px black;
+        }
+        p {
+            color: #f28241;
+            font-size: 1.2rem;
+        }
+
+        div.conteiner {
+            background-color: black;
+            border: 1px solid #f28481;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;/* Esse é o fluxo padrão, é o mesmo que não atribuir. */
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            color: #fff;
+            font-weight: bolder;
+            text-shadow: none;
+            text-align: center;
+
+            padding: 20px;
+            /* flex: auto;  Removemos essa propriedade*/
+        }
+
+
+        /* Testando seletores :child */
+
+        #conteinerChilds > div.item:first-child {/* Seleciona o primeiro item. */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds2 > div.item:last-child {/* Seleciona o último item(filho) direto do contêiner. */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds3 > div.item:nth-child(3) {/* Seleciona o filho(number) escolhido direto do contêiner . */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds4 > div.item:nth-last-child(6) {/* Seleciona o filho direto(number) escolhido do contêiner, em ordem "decrescente"; NEste exemplo o escolhido é o 2° */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds5 > div.item:nth-child(odd) {/* Seleciona os filhos(odd=impares) direto do contêiner em ordem "crescente"; NEste exemplo o escolhido é o 1°, 3°, 5° ...e quantos tiverem */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds6 > div.item:nth-child(even) {/* Seleciona os filhos(evn=pares) direto do contêiner em ordem "crescente"; NEste exemplo o escolhido é o 2°, 4°, 56° ...e quantos tiverem */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds7 > div.item:nth-child(3n) {/* Seleciona filhos múltiplos de 3 (number 3), e é mesmo que (odd = ímpares): Podemos ainda definir qualquer múltiplo alterando o (number). Como no exemplo abaixo.*/
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds7a > div.item:nth-child(4n) {/* Seleciona filhos múltiplos de 4.*/
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        #conteinerChilds8 > div.item:nth-child(n+4) {/* Seleciona todos os filhos apartir do (number) definido, como também o próprio número; Neste exemplo seleciona o quarto(4°) e todos depois dele, ficando assim: 4°, 5°, 6° ...e assim vai. */
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+
+
+        /* Animation usando os Seletores :nth-child(odd) e :nth-child(even). */
+        #conteinerChilds5a, #conteinerChilds6a{
+            background-color: transparent;
+        }
+        #conteinerChilds5a > div.item:nth-child(odd) {
+            /* background-color: blue;
+            border-radius: 20px; */
+            animation: identifier 0.5s ease-in infinite;
+        }
+        #conteinerChilds5a > div.item:nth-child(even) {
+            /* background-color: red;
+            border-radius: 20px; */
+            animation: identifier-red .8s ease-in infinite;
+        }
+
+        #conteinerChilds6a > div.item:nth-child(even) {
+            /* background-color: blue;
+            border-radius: 20px; */
+            animation: identifier 1s ease-out infinite;
+        }
+
+        @keyframes identifier {
+            from {
+                background-color: blue;
+                border-radius: 20px;
+            }
+            to {
+                background-color: rgb(0, 0, 0);
+                border-radius: 0px;
+            }
+        }
+        @keyframes identifier-red {
+            from {
+                background-color: red;
+                border-radius: 20px;
+            }
+            to {
+                background-color: rgb(0, 0, 0);
+                border-radius: 0px;
+            }
+        }
+     </style>
+ </head>
+ <body>
+ 
+    <h1>Seletores :child(s)</h1>
+    
+    <br>
+
+    <h2>Seletor :firt-child</h2>
+
+    <div class="conteiner" id="conteinerChilds">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona o primeiro elemento filho direto do conteiner.</p>
+
+    <br>
+    <hr>
+
+    <h2>Seletor :last-child</h2>
+    
+    <div class="conteiner" id="conteinerChilds2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona o último elemento filho direto do conteiner.</p>
+
+    <br>
+    <hr>
+
+    <h2>Seletor :nth-child(number)</h2>
+    
+    <div class="conteiner" id="conteinerChilds3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona o elemento (number) filho direto do conteiner, que neste exemplo é o terceiro(3°) filho.</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Seletor :nth-last-child(number)</h2>
+    
+    <div class="conteiner" id="conteinerChilds4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona em ordem "regressiva" o elemento (number) filho direto do conteiner, que neste exemplo é o quinto(6°) filho, que em ordem decrescente é igual(=) ao segundo (2°).</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Seletor :nth-child(odd)</h2>
+    
+    <div class="conteiner" id="conteinerChilds5">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona os filhos(odd=impares) direto do contêiner em ordem "crescente"; NEste exemplo os escolhidos são os (numbers) 1°, 3°, 5° ...e quantos tiverem .</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Seletor :nth-child(even)</h2>
+    
+    <div class="conteiner" id="conteinerChilds6">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>Seleciona os filhos(even=pares) direto do contêiner em ordem "crescente"; NEste exemplo os escolhidos são os (numbers) 2°, 4°, 6° ...e quantos tiverem .</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Seletor :nth-child(3n)</h2>
+    
+    <div class="conteiner" id="conteinerChilds7">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+    <p><i>É o mesmo que o seletor de filhos <b>ímpares</b></i> já que seleciona os filhos múltiplos de 3 = (number a cada number) direto do contêiner em ordem "crescente"; NEste exemplo os escolhidos são os (numbers) 3°, 6°, 9° ...e quantos tiverem .</p>
+
+    <h2>Seletor :nth-child(n+4)</h2>
+    <div class="conteiner" id="conteinerChilds7a">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+    </div>
+    <p>Seleciona os múltiplos do (number 4).</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Seletor :nth-child(n+3)</h2>
+    
+    <div class="conteiner" id="conteinerChilds8">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+    <p><i>Seleciona todos os filhos apartir do (number) definido</i>, como também o <b>próprio número</b>; Neste exemplo acima, seleciona o quarto(4°) e todos depois dele, ficando assim: 4°, 5°, 6° ...e assim vai.</p>
+
+    <br>
+    <hr>
+
+
+
+    <h2>Animation usando os Seletores :nth-child(odd) e :nth-child(even).</h2>
+    
+    <div class="conteiner" id="conteinerChilds5a">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <div class="conteiner" id="conteinerChilds6a">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+
+ </body>
+ </html>
