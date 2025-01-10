@@ -1,0 +1,71 @@
+/* Mobile First */
+
+/* Fonte Abril Fatface
+ */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+header > h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 3.3rem;
+    margin: 0 auto;
+}
+header > p {
+    display: inline-block;
+    width: 70%;
+}
+
+article {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+}
+main h1 {
+    font-size: 3rem;
+    font-family: "Faster One", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 8px;
+    text-decoration: none;
+    text-shadow: 4px 4px 2px black;
+}
+
+main p {
+    width: 90%;
+    letter-spacing: .09rem;
+}
+
+aside {
+    text-align: center;
+}
+aside h2 {
+    padding: 20px 20px 10px 10px;
+}
+main aside p {
+    width: 100%;
+    letter-spacing: .09rem;
+    text-align: center;
+}
+
+main section {
+    display: flex;
+    flex-flow: column wrap;
+} 
+
+main section h2 {
+    padding-bottom: 20px;
+}
+.ul1 {
+    /* margin-inline-end: 0%; */
+    columns: 2;
+    text-align: left;
+    margin-left: 22px;
+    padding-left: 22px;
+}
+.ul1 li {
+    font-size: 1.2rem;
+    flex: 1 1 140px;
+}
