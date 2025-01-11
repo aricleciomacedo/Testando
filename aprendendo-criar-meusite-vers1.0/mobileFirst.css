@@ -60,10 +60,14 @@ main section h2 {
 }
 .ul1 {
     /* margin-inline-end: 0%; */
-    columns: 2;
+    /* columns: 2; */
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .ul1 li {
     font-size: 1.2rem;
-    flex: 1 1 140px;
+    flex: 0 1 140px;
 }
