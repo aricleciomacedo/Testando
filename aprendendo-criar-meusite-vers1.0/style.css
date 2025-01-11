@@ -40,7 +40,7 @@ header > h1 {
     color: var(--cor1a);
     font-weight: 100;
     font-size: 3.3em;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
     text-shadow: -4px 2px 10px rgba(0, 0, 0, 0.945);
 }
 header > p {
@@ -50,12 +50,8 @@ header > p {
     color: var(--corwhite);
     font-weight: normal;
     line-height: 1.3em;
-    /* width: 600px; */
-    margin: auto;
-    /* margin-bottom: 30px; */
     padding-right: 10px;
     padding-left: 10x;
-    /* text-shadow: -4px 2px 10px rgba(0, 0, 0, 0.945); */
 }
 header sub {
     color: yellow;
@@ -67,7 +63,7 @@ nav {
     justify-content: space-evenly;
     background-color: var(--corblack);
     box-shadow: 0px 0px 2px #0300c5;
-    margin: 10px 23px 10px 23px;
+    margin: 4px 20px 4px 20px;
     padding: 10px;
 }
 nav > a {
@@ -80,23 +76,13 @@ nav > a {
     font-weight: bold;
     transition-duration: .5s;
 }
-/* nav a::before {
-    content: "➫";
-    color: var(--cor3);
-} */
 nav > a:hover{
-    padding-top: 10px;
-    padding-bottom: 9px;
-    border-radius: 7px;
-    border: 1px solid var(--cor4);
+    border-radius: 8px;
     background-color: var(--cor1a);
     color: var(--cor5);
 }
 main {
-    min-width: 300px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    padding: 22px;
     background-color: var(--cor3);
     box-shadow: /* inset */ 0px 0px 10px  rgba(0, 0, 0, 0.411);
     border-bottom-left-radius: 10px;
@@ -158,39 +144,34 @@ main aside p {
     line-height: 1.3em;
 }
 main section {
-    max-width: 464px;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--cor4);
     font-size: 1em;
-    font-weight: normal;
-    /*background-image: linear-gradient(to right, var(--cor1), transparent); */
-    border-radius: 7px;
-    padding: 10px;
-    margin: auto;
 }
 main section h2 {
     padding-bottom: 7px;
     color: yellow;
 }
+
+
 .ul1 {
-    margin-inline-end: 0%;
     columns: 2;
+    display: inline-block;
+    text-indent: 40px;
 }
 .ul1 li {
     color: whitesmoke;
     font-weight: normal;
     font-size: .9em;
     list-style-type: none;
+    padding-left: 40px;
 }
 .ul1 img{
     background-color: var(--corwhite);
     border: 1px solid var(--corwhite);
     border-radius: 20px;
 }
-.ul1 a {
-    display: none;
-}
-li:hover {
+li:hover {  
     color: yellow;
 }
 .ul1 img:hover {
@@ -199,53 +180,57 @@ li:hover {
     border-radius: 20px;
 }
 #youtube:hover  .youtube {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
+    color: white;
 }
 #github:hover  .github {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
+    color: white;
 }
 #instagram:hover .instagram {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
+    color: white;
 }
 #linkedin:hover .linkedin {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
+    color: white;
 }
 #twitter:hover .twitter {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
 }
 #facebook:hover .facebook {
-    display: inline-block;
+    animation: linkAnimated 1.2s linear infinite;
+    color: white;
 }
 main a {
     color: var(--cor1);
     text-decoration: none;
-    transition: .5s;
+    text-align: center;
+    text-indent: 0px;
+    padding: 3px;
+    border-radius: 20px;
 }
 main a:hover {
     color: var(--corwhite);
     background-color: var(--cor0);
     border-radius: 20px;
 }
-
 main section .marca {
     position: fixed;
     margin: 0px;
     right: 7px;
-    bottom: 13px;
+    bottom: 14px;
     opacity: 7%;
 }
 footer {
-    /* background-color: var(--cor3); */
-    /* background-image: linear-gradient(1deg, rgba(0, 0, 0, 1.781), var(--cor0a)); */
+    position: relative;
+    bottom: -30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    /* border-bottom: 3px solid var(--cor4); */
-    margin: 17px 10px 0px 10px;
 }
 marquee {
     color: var(--cor1a);
     background-color: var(--cor0a), transparent;
-    margin: 0px 67px 0px 0px;
 }
 footer  > p {
     color: var(--cor1a);
@@ -270,5 +255,14 @@ footer p::after {
     }
     100%{
         transform: rotateY(180deg);
+    }
+}
+
+@keyframes linkAnimated {
+    0% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: blue;
     }
 }

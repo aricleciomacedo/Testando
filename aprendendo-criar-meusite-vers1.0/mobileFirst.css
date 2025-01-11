@@ -62,8 +62,6 @@ main section h2 {
     /* margin-inline-end: 0%; */
     columns: 2;
     text-align: left;
-    margin-left: 22px;
-    padding-left: 22px;
 }
 .ul1 li {
     font-size: 1.2rem;
