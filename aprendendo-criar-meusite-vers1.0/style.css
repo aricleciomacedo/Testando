@@ -157,7 +157,7 @@ main section h2 {
 .ul1 {
     columns: 2;
     display: inline-block;
-    text-indent: 40px;
+    /* text-indent: 40px; */
 }
 .ul1 li {
     color: whitesmoke;
