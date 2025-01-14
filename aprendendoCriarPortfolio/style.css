@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+:root {
+    --corwhite: white;
+    --corblack: black;
+    --cor0: #0300e6;
+    --cor0a: #3762ffd9;
+    --cor1: #109aeb;
+    --cor1a: #e9f6ff;
+    --cor1b: #b4d0ff;
+    --cor2: #4366ff;
+    --cor3: #020008c5;
+    --cor4: #010035;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+}
+body {
+    background-color: var(--cor4);
+}
+header {
+    background-color: var(--cor0);
+    background-image: linear-gradient(1deg, rgba(0, 0, 0, 1.781), var(--cor0a));
+    text-align: center; 
+    padding-top: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-style: double;
+}
+header > h2 {
+    color: var(--cor1a);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.596);
+    padding-top: 7px;
+}
+header > h2 span {
+    color: var(--cor1);
+}
+
+nav {
+    text-align: center;
+    font-size: 1.3em;
+    background-color: var(--cor0);
+    background-image: linear-gradient(to bottom, black 90%,#0300c5);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    padding: 14px 0px 24px 0px;
+}
+nav > a {
+    color: var(--cor1);
+    padding: 10px 28px 10px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: .5s;
+}
+nav > a:hover{
+    border-radius: 7px;
+    background-color: var(--cor1a);
+    color: var(--cor5);
+    transition: 1s;
+}
+
+main.content-main  {
+    width: 94vw;
+    margin: auto;
+    background-color: var(--cor3);
+    /* background-image: url("./img/background3Gimp.png");
+    background-attachment: scroll;
+    background-position: 100% 27%;
+    background-repeat: no-repeat;
+    background-size: 50%; */
+    box-shadow: /* inset */ 0px 0px 10px  rgba(0, 0, 0, 0.411);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.my-name {
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.my-name .my-dream {
+    padding-left: 20px;
+}
+.my-name .my-dream h1 {
+    color: var(--cor1a);
+    font-size: 3.5em;
+    padding-bottom: 20px;
+}
+.my-name .my-dream h1 span {
+    color: var(--cor1);
+}
+.my-name h3 {
+    color: var(--cor1a);
+    font-size: 1.2em;
+}
+.my-name .my-img {
+    display: flex;
+    justify-content: flex-end;
+}
+.my-name .my-img img {
+    width: 30em;
+    height: 20em;
+}
+
+section.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 4%;
+    background-color: var(--corblack);
+}
+section.about-me img {
+    height: 400px;
+    margin-right: 30px;
+}
+section.about-me div h2 {
+    color: var(--cor1a);
+    font-size: 4.5em;
+}
+section.about-me div h2 span{
+    color: var(--cor1);
+}
+section.about-me div p {
+    color: var(--cor1b);
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+section.about-me div button {
+    color: var(--corwhite);
+    background-color: var(--cor0);
+    height: 50px;
+    width: 50%;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
+}
+section.about-me div button:hover {
+    background-color: var(--cor4);
+    border: 2px solid var(--cor1b);
+    transition: .4s;
+}
+section.about-me div button a {
+    color: var(--corwhite);
+    font-size: 1.2em;
+    text-decoration: none;
+}
+section.about-me div button a:hover {
+    color: var(--cor1b);
+    transition: .5s;
+}
+
+
+section.my-projects {
+    background-image: linear-gradient(180deg, var(--cor4), var(--cor0), var(--cor4)) !important;
+    padding: 20px 0px 70px 0px;
+}
+section.my-projects h2 {
+    color: var(--corwhite);
+    font-size: 4.5em;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+div.container-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+section.my-projects div.container-cards div.card {
+    background-color: var(--corblack);
+    height: 375px;
+    /* width: 335px; Para responsividade dos cards usamos a propredade flex = flex grow, flex-shirink e flex-basis.*/
+    border-radius: 20px;
+    padding: 20px 35px;
+    text-align: center;
+
+    flex: 0 1 335px;
+}
+section.my-projects div.container-cards div.card img {
+    height: 100px;
+}
+section.my-projects div.container-cards div.card h4 {
+    padding-top: 10px;
+    color: var(--cor1a);
+    font-size: 1.8em;
+}
+section.my-projects div.container-cards div.card p {
+    color: var(--cor1b);
+    margin: 20px 0px 40px 0px;
+}
+section.my-projects div.container-cards div.card a {
+    background-color: var(--cor0);
+    color: var(--cor1a);
+    padding: 12px 22px;
+    border-radius: 26px;
+    cursor: pointer;
+    text-decoration: none;
+}
+section.my-projects div.container-cards div.card a:hover {
+    border: 1.5px solid var(--cor1);
+    background-color: var(--cor4) transparent;
+    transition: 500ms;
+}
+
+
+
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corblack);
+    /* text-align: center; */
+    padding: 100px 0px 100px 0px;
+}
+footer h5 {
+    color: var(--corwhite);
+    font-size: 1.8em;
+}
+footer p {
+    color: var(--cor1a);
+    font-size: 1.1em;
+    margin: 20px 0px 30px 0px;
+}
+footer div.my-contacts {
+    display: flex;
+    gap: 20px;
+}
+footer div.my-contacts a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--cor0);
+    margin-bottom: 20px;
+
+
+} 
+footer div.my-contacts a:hover {
+    background-color: var(--corwhite);
+    transform: scale(1.2);
+    transition: 500ms;
+}
+footer div.my-contacts img {
+    filter: invert(100%) brightness(100%) contrast(80%);
+    height: 30px;
+    display: flex;
+}
+footer div.my-contacts img:hover {
+    filter: invert(0%) contrast(100%);
+    transition: .5s;
+}
+
+
+marquee {
+    color: var(--cor1a);
+    background-color: var(--cor0a), transparent;
+    margin: 0px 67px 0px 0px;
+}
+footer p::before {
+    content: "« ";
+    color: var(--corwhite);
+}
+footer p::after {
+    content: " »";
+    color: var(--corwhite);
+}

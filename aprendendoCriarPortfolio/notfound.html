@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-color: rgb(8, 8, 8);
+            margin-top: 55px;
+        }
+        main {
+            width: calc(100vw - 10px);
+            height: calc(100vh - 100px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            color: cornsilk;
+            background-image: linear-gradient(1deg, blue, black);
+            background-repeat: no-repeat;
+            border: 3px solid lightblue;
+            border-bottom-left-radius: 90px;
+            border-top-right-radius: 90px; 
+            padding: 12px 3px 3px 12px;
+            text-align: center;
+        }
+        section p strong:hover {
+            color: yellow;
+            transition: 500ms;
+        }
+        img {
+            width: 50%;
+            height: 7em;
+        }
+        h1 {
+            color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+            font-size: 47px;
+            text-shadow: 4px 2px 0px rgb(0, 0, 0);
+        }
+        main p {
+            font-size: 1.2em;
+        }
+        h2 {
+            color: yellow;
+            text-shadow: 4px 2px 0px rgb(0, 0, 0);
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        div > p {
+            display: none;
+            color: rgb(255, 255, 0);
+            background-color: black;
+            padding: 12px;
+            border-radius: 20px;
+        }
+        div > img {
+            display: none;
+            margin: auto;
+        }
+        div:hover .maisinfo , img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <img src="img/logoG.jpg" alt="logo.png">
+            <h1>Links não disponíveis</h1>
+            <p>Volte para a página anterior <a href="index.html" target="_self" rel="prev"><strong>clique aqui</strong></a></p>
+            <h2>OBS:</h2>
+            <p>Estamos em processo de aprendizado e desenvolvimento, por isso esta página ainda está sendo pensada.<br> Para vizualizar mais informações pare o mouse </p>
+            <div>
+                <a href="#">AQUI!</a>
+                <p class="maisinfo">Informamos que ainda estamos em manutenção! <br>                Por isso não há link de acessível.
+                <img class="maisinfo" src="img/logomarcap.png" alt="logomarcap.png" style="margin: auto;">
+                AGRADECE O DEPARTAMENTO!</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
