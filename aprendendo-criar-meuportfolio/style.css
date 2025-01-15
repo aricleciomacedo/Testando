@@ -4,7 +4,6 @@
     --corwhite: white;
     --corblack: black;
     --cor0: #0300e6;
-    --cor0a: #3762ffd9;
     --cor1: #109aeb;
     --cor1a: #e9f6ff;
     --cor1b: #b4d0ff;
@@ -16,220 +15,257 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cor4);
 }
 header {
     background-color: var(--cor0);
     background-image: linear-gradient(1deg, rgba(0, 0, 0, 1.781), var(--cor0a));
-    min-height: 150px;
-    text-align: center;
+    text-align: center; 
     padding-top: 10px;
     border-bottom-right-radius: 35px;
     border-bottom-left-radius: 35px;
     border-bottom-style: double;
 }
-header > h1 {
+header > h2 {
     color: var(--cor1a);
-    font-size: 3.3em;
-    margin-bottom: 17px;
-    font-weight: bold;
-    text-shadow: -4px 2px 10px rgba(0, 0, 0, 0.945);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.596);
+    padding-top: 7px;
 }
-header > p {
-    display: inline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    color: var(--corwhite);
-    font-weight: normal;
-    line-height: 1.3em;
-    /* width: 600px; */
-    margin: auto;
-    /* margin-bottom: 30px; */
-    padding-right: 10px;
-    padding-left: 10x;
-    /* text-shadow: -4px 2px 10px rgba(0, 0, 0, 0.945); */
+header > h2 span {
+    color: var(--cor2);
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.596);
 }
+
 nav {
     text-align: center;
+    font-size: 1.3em;
     background-color: var(--cor0);
     background-image: linear-gradient(to bottom, black 90%,#0300c5);
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
-    margin: 10px 23px 10px 23px;
-    padding: 10px;
+    padding: 14px 0px 24px 0px;
 }
 nav > a {
     color: var(--cor1);
-    padding: 10px 33px 8px 28px;
+    padding: 10px 28px 10px 28px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
     transition-duration: .5s;
 }
-/* nav a::before {
-    content: "➫";
-    color: var(--cor3);
-} */
 nav > a:hover{
-    padding-top: 10px;
-    padding-bottom: 9px;
     border-radius: 7px;
-    border: 1px solid var(--cor4);
     background-color: var(--cor1a);
     color: var(--cor5);
+    transition: 1s;
 }
-main {
-    min-width: 300px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+
+main.content-main  {
+    width: 94vw;
+    margin: 10px auto;
+    box-shadow: 2px 3px 7px 0px black;
     background-color: var(--cor3);
-    box-shadow: /* inset */ 0px 0px 10px  rgba(0, 0, 0, 0.411);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-main .imagem img {
-    margin: 30px;
-    float: left;
-    width: 250px;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.445);
-}
-main h1 {
-    color: var(--cor1b);
-    text-decoration:underline;
-    text-decoration-color: yellow;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 1.8em;
-}
-main p {
-    padding-top: 7px;
-    color: var(--cor1a);
-    text-indent: 30px;
-    line-height: 1.3em;
-}
-main abbr {
-    color: yellow;
-    text-decoration: none;
-}
-main aside{
-    margin: 7px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    text-indent: 8px;
-}
-main aside h2 {
-    color: var(--cor1);
-    text-decoration:underline;
-    text-decoration-color: yellow;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 
+.my-name {
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
 }
-main aside p {
-    padding-top: 7px;
-    text-align: justify;
-    text-indent: 30px;
-    font-size: 1em;
-    line-height: 1.3em;
+.my-name .my-dream {
+    padding-left: 20px;
 }
-main section {
-    max-width: 464px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor4);
-    font-size: 1em;
-    font-weight: normal;
-    /*background-image: linear-gradient(to right, var(--cor1), transparent); */
-    border-radius: 7px;
-    padding: 10px;
-    margin: auto;
+.my-name .my-dream h1 {
+    color: var(--cor1a);
+    font-size: 3.5em;
+    padding-bottom: 20px;
 }
-main section h2 {
-    padding-bottom: 7px;
-    color: yellow;
-}
-.ul1 {
-    margin-inline-end: 0%;
-    columns: 2;
-}
-.ul1 li {
-    color: whitesmoke;
-    font-weight: normal;
-    font-size: .9em;
-    list-style-type: none;
-}
-.ul1 img{
-    background-color: var(--corwhite);
-    border: 1px solid var(--corwhite);
-    border-radius: 20px;
-}
-.ul1 a {
-    display: none;
-}
-li:hover {
-    color: yellow;
-}
-.ul1 img:hover {
-    background-color: yellow;
-    border: 1px solid yellow;
-    border-radius: 20px;
-}
-#youtube:hover  .youtube {
-    display: inline-block;
-}
-#github:hover  .github {
-    display: inline-block;
-}
-#instagram:hover .instagram {
-    display: inline-block;
-}
-#linkedin:hover .linkedin {
-    display: inline-block;
-}
-#twitter:hover .twitter {
-    display: inline-block;
-}
-#facebook:hover .facebook {
-    display: inline-block;
-}
-main a {
+.my-name .my-dream h1 span {
     color: var(--cor1);
-    text-decoration: none;
-    transition: .5s;
 }
-main a:hover {
+.my-name h3 {
+    color: var(--cor1a);
+    font-size: 1.2em;
+}
+.my-name .my-img {
+    display: flex;
+    justify-content: flex-end;
+}
+.my-name .my-img img {
+    width: 30em;
+    height: 20em;
+}
+
+section.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 4%;
+    background-color: var(--corblack);
+}
+section.about-me img {
+    height: 400px;
+    margin-right: 30px;
+}
+section.about-me div h2 {
+    color: var(--cor1a);
+    font-size: 4.5em;
+}
+section.about-me div h2 span{
+    color: var(--cor1);
+}
+section.about-me div p {
+    color: var(--cor1b);
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+section.about-me div button {
     color: var(--corwhite);
     background-color: var(--cor0);
-    border-radius: 20px;
+    height: 50px;
+    width: 50%;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
+}
+section.about-me div button:hover {
+    background-color: var(--cor4);
+    border: 2px solid var(--cor1b);
+    transition: .4s;
+}
+section.about-me div button a {
+    color: var(--corwhite);
+    font-size: 1.2em;
+    text-decoration: none;
+}
+section.about-me div button a:hover {
+    color: var(--cor1b);
+    transition: .5s;
 }
 
-main section .marca {
-    position: fixed;
-    margin: 0px;
-    right: 7px;
-    top: 595px;
-    bottom: 3px;
-    opacity: 7%;
+
+section.my-projects {
+    background-image: linear-gradient(180deg, var(--cor4), var(--cor0), var(--cor4)) !important;
+    padding: 20px 0px 70px 0px;
 }
-footer {
-    /* background-color: var(--cor3); */
-    /* background-image: linear-gradient(1deg, rgba(0, 0, 0, 1.781), var(--cor0a)); */
-    font-family: Arial, Helvetica, sans-serif;
+section.my-projects h2 {
+    color: var(--corwhite);
+    font-size: 4.5em;
     text-align: center;
-    /* border-bottom: 3px solid var(--cor4); */
-    margin: 17px 10px 0px 10px;
+    padding: 20px 0px 20px 0px;
 }
+div.container-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+section.my-projects div.container-cards div.card {
+    background-color: var(--corblack);
+    height: 375px;
+    /* width: 335px; Para responsividade dos cards usamos a propredade flex = flex grow, flex-shirink e flex-basis.*/
+    border-radius: 20px;
+    padding: 20px 35px;
+    text-align: center;
+
+    flex: 0 1 335px;
+}
+section.my-projects div.container-cards div.card img {
+    height: 100px;
+}
+section.my-projects div.container-cards div.card h4 {
+    padding-top: 10px;
+    color: var(--cor1a);
+    font-size: 1.8em;
+}
+section.my-projects div.container-cards div.card p {
+    color: var(--cor1b);
+    margin: 20px 0px 40px 0px;
+}
+section.my-projects div.container-cards div.card a {
+    background-color: var(--cor0);
+    color: var(--cor1a);
+    padding: 12px 22px;
+    border-radius: 26px;
+    cursor: pointer;
+    text-decoration: none;
+}
+section.my-projects div.container-cards div.card a:hover {
+    border: 1.5px solid var(--cor1);
+    background-color: var(--cor4) transparent;
+    transition: 500ms;
+}
+
+
+
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corblack);
+    /* text-align: center; */
+    padding: 100px 0px 100px 0px;
+}
+footer h5 {
+    color: var(--corwhite);
+    font-size: 1.8em;
+}
+footer p {
+    color: var(--cor1a);
+    font-size: 1.1em;
+    margin: 20px 0px 30px 0px;
+}
+footer div.my-contacts {
+    display: flex;
+    gap: 20px;
+}
+footer div.my-contacts a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--cor0);
+    margin-bottom: 20px;
+
+
+} 
+footer div.my-contacts a:hover {
+    background-color: var(--corwhite);
+    transform: scale(1.2);
+    transition: 500ms;
+}
+footer div.my-contacts img {
+    filter: invert(100%) brightness(100%) contrast(80%);
+    height: 30px;
+    display: flex;
+}
+footer div.my-contacts img:hover {
+    filter: invert(0%) contrast(100%);
+    transition: .5s;
+}
+
+
 marquee {
+    width: 90%;
     color: var(--cor1a);
     background-color: var(--cor0a), transparent;
-    margin: 0px 67px 0px 0px;
-}
-footer  > p {
-    color: var(--cor1a);
-    background-color: var(--cor0a), transparent;
-    font-size: 1.3em;
 }
 footer p::before {
     content: "« ";
