@@ -4,7 +4,6 @@
     --corwhite: white;
     --corblack: black;
     --cor0: #0300e6;
-    --cor0a: #3762ffd9;
     --cor1: #109aeb;
     --cor1a: #e9f6ff;
     --cor1b: #b4d0ff;
@@ -40,7 +39,8 @@ header > h2 {
     padding-top: 7px;
 }
 header > h2 span {
-    color: var(--cor1);
+    color: var(--cor2);
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.596);
 }
 
 nav {
@@ -68,14 +68,9 @@ nav > a:hover{
 
 main.content-main  {
     width: 94vw;
-    margin: auto;
+    margin: 10px auto;
+    box-shadow: 2px 3px 7px 0px black;
     background-color: var(--cor3);
-    /* background-image: url("./img/background3Gimp.png");
-    background-attachment: scroll;
-    background-position: 100% 27%;
-    background-repeat: no-repeat;
-    background-size: 50%; */
-    box-shadow: /* inset */ 0px 0px 10px  rgba(0, 0, 0, 0.411);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -268,9 +263,9 @@ footer div.my-contacts img:hover {
 
 
 marquee {
+    width: 90%;
     color: var(--cor1a);
     background-color: var(--cor0a), transparent;
-    margin: 0px 67px 0px 0px;
 }
 footer p::before {
     content: "« ";
