@@ -7,14 +7,26 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        padding: 14px 7% 24px 7%;
     }
     .my-name {
         text-align: center;
+    }
+    .my-name .my-dream h1 {
+        color: var(--cor1a);
+        font-size: 4.7em;
     }
     .about-me {
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
+    }
+    section.about-me div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and (max-width: 490px) {
