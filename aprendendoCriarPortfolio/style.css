@@ -51,7 +51,20 @@ nav {
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
     padding: 14px 0px 24px 0px;
 }
-nav > a {
+nav button {
+    padding: 10px 28px 10px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: .5s;
+    flex: 1 0 270px;
+    align-content: center;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+}
+nav a {
     color: var(--cor1);
     padding: 10px 28px 10px 28px;
     border-radius: 5px;
@@ -63,7 +76,7 @@ nav > a {
     align-content: center;
     text-align: center;
 }
-nav > a:hover{
+nav  a:hover{
     border-radius: 7px;
     background-color: var(--cor1a);
     color: var(--cor5);
@@ -98,12 +111,6 @@ main.content-main  {
 .my-name .my-dream h1 {
     color: var(--cor1a);
     font-size: 4.5em;
-
-    /* width: 600px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    animation: writing 2s steps(22), flashing .7s step-end infinite alternate; */
 }
 .my-name .my-dream h1 span {
     color: var(--cor1);
@@ -164,22 +171,11 @@ section.about-me div {
     flex-direction: column;
     justify-content: center;
 }
-section.about-me img {
-    margin-right: 30px;
-
-    animation: animationBg 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s infinite alternate both running;
-    /* animation-duration: 3s; 
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    animation-play-state: running;
-    animation-name: animationBg; */
-}
+/* section.about-me img.img-port {} */
 section.about-me div h2 {
     color: var(--cor1a);
     font-size: 4.5em;
+    z-index: 4;
 }
 section.about-me div h2 span{
     color: var(--cor1);
@@ -189,6 +185,7 @@ section.about-me div p {
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 50px;
+    z-index: 5;
 }
 section.about-me div button {
     color: var(--corwhite);
@@ -199,6 +196,7 @@ section.about-me div button {
     border: none;
     border-radius: 27px;
     cursor: pointer;
+    z-index: 5;
 
     animation: animationBtn 3s linear infinite;
 }
@@ -219,7 +217,7 @@ section.about-me div button a:hover {
 
 
 section.my-projects {
-    background-image: linear-gradient(180deg, var(--cor4), var(--cor0), var(--cor4)) !important;
+    background-image: linear-gradient(180deg, var(--cor3), var(--cor2), var(--cor4)) !important;
     padding: 20px 0px 70px 0px;
 }
 section.my-projects h2 {
@@ -236,13 +234,16 @@ div.container-cards {
 }
 section.my-projects div.container-cards div.card {
     background-color: var(--corblack);
+    background: var(--corblack) linear-gradient(0deg, black, blue, black 70%);
     height: 375px;
+
     /* width: 335px; Para responsividade dos cards usamos a propredade flex = flex grow, flex-shirink e flex-basis.*/
+    flex: 0 1 335px;
+
     border-radius: 20px;
     padding: 20px 35px;
     text-align: center;
-
-    flex: 0 1 335px;
+    animation: animationCards 10s linear infinite;
 }
 section.my-projects div.container-cards div.card img {
     height: 100px;
@@ -256,12 +257,18 @@ section.my-projects div.container-cards div.card p {
     color: var(--cor1b);
     margin: 20px 0px 40px 0px;
 }
+section.my-projects div.container-cards div.card button {
+    background: none;
+    border: none;
+    border-radius: 26px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 section.my-projects div.container-cards div.card a {
     background-color: var(--cor0);
     color: var(--cor1a);
     padding: 12px 22px;
     border-radius: 26px;
-    cursor: pointer;
     text-decoration: none;
 }
 section.my-projects div.container-cards div.card a:hover {
@@ -271,6 +278,44 @@ section.my-projects div.container-cards div.card a:hover {
 }
 
 
+
+/* Animation */
+.to-hide {/* Escondido = to hide*/
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-200%);
+    transition: all 2s;
+}
+.to-appear {/* Mostrar = to appear */
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
+.my-img img.img-port {
+    animation: animationBg 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s infinite alternate both running;
+    width: 200px;
+}
+
+.my-img :nth-child(1) {
+    z-index: 2;
+    filter: contrast(2) drop-shadow(-14px 0px 3px black);
+}
+.my-img :nth-child(2) {
+    position: absolute;
+    top: 0.5%;
+    left: -20%;
+    z-index: 1;
+    filter: contrast(100) brightness(0.2) drop-shadow(-14px 0px 3px black);
+    transition-delay: .5ms;
+}
+.my-img :nth-child(3) {
+    position: absolute;
+    top: 1%;
+    left: -40%;
+    filter: drop-shadow(-14px 0px 3px black);
+    transition-delay: 1s;
+}
 
 
 footer {
@@ -387,20 +432,46 @@ footer p::after {
         left: -7%;
     }
 }
+
 @keyframes animationContacts {
     to {
         background-color: rgb(0, 0, 14);
     }
 }
 
-/* Animation Text */
-@keyframes writing {
-    from {
-        width: 0;
+/* Animation Cards */
+@keyframes animationCards {
+    /* from {
+        background: var(--corblack) linear-gradient(0deg, black, blue, black 70%);
+    } */
+    10% {
+        background: var(--corblack) linear-gradient(38deg, black, blue, black 70%);
     }
-}
-@keyframes flashing {
+    20% {
+        background: var(--corblack) linear-gradient(76deg, black, blue, black 70%);
+    }
+    30% {
+        background: var(--corblack) linear-gradient(114deg, black, blue, black 70%);
+    }
+    40% {
+        background: var(--corblack) linear-gradient(152deg, black, blue, black 70%);
+    }
     50% {
-        border-color: transparent;
+        background: var(--corblack) linear-gradient(190deg, black, blue, black 70%);
+    }
+    60% {
+        background: var(--corblack) linear-gradient(228deg, black, blue, black 70%);
+    }
+    70% {
+        background: var(--corblack) linear-gradient(266deg, black, blue, black 70%);
+    }
+    80% {
+        background: var(--corblack) linear-gradient(304deg, black, blue, black 70%);
+    }
+    90% {
+        background: var(--corblack) linear-gradient(342deg, black, blue, black 70%);
+    }
+    100% {
+        background: var(--corblack) linear-gradient(380deg, black, blue, black 70%);
     }
 }
