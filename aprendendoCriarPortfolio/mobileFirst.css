@@ -28,6 +28,21 @@
         justify-content: center;
         align-items: center;
     }
+
+        /* Animation */
+    .to-hide {/* Escondido = to hide*/
+        transform: translateX(-100%);
+    }
+    .to-appear {/* Mostrar = to appear */
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transition: all 2s;
+    }
+    .my-img img.img-port {
+        animation: animationBg 4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s infinite alternate both running;
+        width: 200px;
+    }
 }
 @media screen and (max-width: 490px) {
     .my-name .my-img img {
